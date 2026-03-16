@@ -1,0 +1,40 @@
+# Perceptrón simple en Python
+
+## Objetivo
+Implementar una neurona básica tipo perceptrón que calcule el puntaje \(z = w \cdot x + b\) y realice una clasificación binaria mediante una función de activación escalón.[web:6]
+
+## Qué se implementó
+Se implementó un perceptrón con:
+- Dos entradas numéricas \((x_1, x_2)\).
+- Un vector de pesos \(w = [w_1, w_2]\) y un término de bias \(b\).[web:6]
+- Cálculo explícito del puntaje \(z = w_1 x_1 + w_2 x_2 + b\).[web:6]
+- Regla de decisión: si \(z \ge 0\) la salida es 1, en caso contrario la salida es 0.[web:6]
+
+El código está desarrollado en un notebook de Google Colab usando Python, NumPy y Pandas para manejar vectores y generar una tabla de resultados.[web:6]
+
+## Pruebas realizadas (en términos generales)
+Se definió un conjunto de casos de prueba controlados, donde cada ejemplo incluye un par de valores \((x_1, x_2)\). Para cada ejemplo se:
+- Calculó el puntaje \(z\) mediante el producto punto entre los pesos y las entradas más el bias.[web:6]
+- Aplicó la función escalón para obtener la clasificación binaria (0 o 1).[web:6]
+- Registró la información en una tabla (DataFrame) con columnas: \(x_1\), \(x_2\), \(z\) y salida.[web:6]
+
+Estas pruebas permiten observar cómo cambia la decisión del modelo cuando varían las entradas y cómo influyen los parámetros \(w\) y \(b\) en el valor de \(z\).[web:6]
+
+## Resultados principales (una frase)
+El perceptrón clasifica correctamente los casos de prueba definidos y muestra que cambios en los pesos y en el bias desplazan la frontera de decisión, modificando qué ejemplos se asignan a la clase 0 o a la clase 1.[web:6]
+
+## Cómo ejecutar
+
+1. Abrir el notebook en Google Colab.
+2. Asegurarse de tener las librerías necesarias:
+   - NumPy
+   - Pandas[web:24]
+3. Ejecutar las celdas en el siguiente orden:
+   - Celda donde se definen los pesos `w` y el bias `b`.
+   - Celda donde se define la función `perceptron(x)` que calcula el puntaje `z` y la salida.
+   - Celda donde se crea el conjunto de pruebas (`X_test`) y se recorren los ejemplos para imprimir `x1`, `x2`, `z` y `salida`.
+   - Celda donde se construye y muestra el DataFrame con la tabla resumen de resultados.[web:6]
+4. Revisar en la salida del notebook:
+   - Las impresiones de cada caso de prueba (entrada, puntaje `z` y salida).
+   - La tabla final con todos los resultados para verificar el comportamiento del modelo.[web:6]
+
