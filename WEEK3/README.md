@@ -96,4 +96,4 @@ Los resultados muestran que incluso un modelo simple como el perceptrón puede a
 
 ## Autor
 
-Proyecto desarrollado como práctica académica de **Redes Neuronales / Inteligencia Artificial**.
+Proyecto desarrollado por jensul villalba gaitan como práctica académica de **Redes Neuronales / Inteligencia Artificial**.
