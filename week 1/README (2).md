@@ -1,47 +1,64 @@
-# Week1
-# DeepLearning_Especializacion
-Conceptualización sobre deep learning
-
-# Grafico del ejercicio:
-<img width="663" height="487" alt="image" src="https://github.com/user-attachments/assets/3f0cc6b6-14aa-444f-8fa3-6492815dce17" />
-
-## 1) ¿Qué es el bias (b)?
--Es como el "nivel de exigencia" de la neurona. Si el bias es alto, la neurona se activa fácil. Si es muy negativo, se pone difícil de activar, como alguien que necesita mucho para convencerse.
-## 2) ¿Qué significa "se parece a AND"?
--Básicamente es una neurona se comporta igualito a la compuerta lógica AND: solo da 1 cuando las dos entradas son 1. Si alguna es 0, el resultado es 0. Es la típica de "solo si los dos dicen sí, pasa".
-## 3) ¿Por qué con b=-0.5 me salen más '1'?
--Porque al subir el bias (hacerlo menos negativo), le baja la vara a la neurona. Ahora no necesita tanta "evidencia" para activarse, entonces se prende más fácil y salen más unos.
-## 4) ¿Qué pasa si b es muy negativo (ej. -2.0)?
--La neurona se vuelve súper estricta, tipo profe exigente. Necesita que ambas entradas estén en 1 y aún así apenas le alcanza. Básicamente sube tanto el umbral que casi nada la activa.
-## 5) ¿Qué es z?
--Es el cálculo intermedio, lo que pasa "por dentro" antes de decidir si la neurona se activa o no. Se calcula como z = x1*w1 + x2*w2 + b. Si z sale mayor o igual a 0, la neurona dice "1" (se activa). Si z es negativo, dice "0" (no pasa nada).
-## 6) ¿Dónde respondo las preguntas?
--Se usar google colab pero, use lo que tenia mas a la mano en este caso directamente en visual studio code
-## 7) ¿Qué debo entregar?
--El notebook .ipynb metido en tu repo de GitHub, en este caso paso el archivo main que genere con comentarios.
-## 8) Me dio diferente al compañero, ¿está mal?
--No necesariamente. Revisá que no hayas tocado los pesos w1 y w2. Si solo cambiaste el bias b, hice varias pruebas con diferentes pesos, esto se evidencia en los resultados de la consola.
-## 9) ¿Esto ya es entrenar un modelo?
--Todavía no. claro, esto simplemente por el momento es pasar datos a un perceptron basico, basicamente una pequeñisima neurona validadora
-
-![DeepLearning](https://github.com/user-attachments/assets/e8d1c274-45de-4309-989c-e3e42e300f75)
 
 
-# Week1
 
-## 🎯 Objetivo
-Consolidar las bases del aprendizaje profundo mediante la implementación de una neurona básica (perceptrón) para comprender la toma de decisiones por umbral.
+# 🧠 Redes Neuronales Básicas
 
-## 🛠️ Implementación
-Se desarrolló un modelo en Python que realiza los siguientes procesos:
-1. **Cálculo del puntaje $z$**: Suma ponderada de entradas y pesos más el sesgo ($z = \sum x_i w_i + b$).
-2. **Función de Activación**: Regla de umbral (Step Function) para clasificar la salida en 0 o 1.
+## 📌 Descripción
 
-## 🧪 Pruebas Realizadas
-Se configuraron casos controlados con diferentes combinaciones de entradas binarias y ajustes en el **Bias** para observar cómo cambia el comportamiento de la neurona (comportamiento tipo compuerta OR/AND).
+En esta actividad se implementan modelos básicos de redes neuronales utilizando Python y NumPy, con el fin de comprender el funcionamiento de una neurona artificial y el proceso de clasificación binaria.
 
-## 📈 Resultado Principal
-Se identificó que el **bias ($b$)** actúa como el umbral de exigencia de la neurona: un bias más negativo requiere entradas más fuertes para generar una activación (1).
+---
 
-## 🚀 Cómo ejecutar
-1. Abrir el archivo `main.py` y ejecutar desde consola con python main.py.
+## 🎯 Conceptos trabajados
+
+* Entradas
+* Pesos
+* Bias (sesgo)
+* Cálculo de z = w·x + b
+* Función de activación
+* Salida binaria (0 o 1)
+
+---
+
+## 🧠 Implementación
+
+### 🔹 Perceptrón
+
+Se implementa un perceptrón que clasifica correctamente datos linealmente separables (compuerta AND).
+Incluye entrenamiento y gráfica de error por época.
+
+---
+
+### 🔹 Red neuronal de una capa
+
+Se implementa una red simple utilizando operaciones matriciales con NumPy y función de activación sigmoide.
+
+---
+
+### 🔹 Red neuronal multicapa
+
+Se implementa una red con una capa oculta (ReLU) y una capa de salida (Sigmoid).
+Se realiza únicamente el cálculo hacia adelante (forward).
+
+---
+
+## ⚙️ Uso de NumPy
+
+Se utilizan operaciones como:
+
+* Multiplicación matricial (`np.dot`)
+* Sumas y transposiciones
+
+---
+
+## 📊 Resultados
+
+* El perceptrón clasifica correctamente la compuerta AND
+* El error disminuye durante el entrenamiento
+* Se evidencia el uso de funciones de activación en cada modelo
+
+---
+
+## 📌 Conclusión
+
+Se logró implementar y entender el funcionamiento básico de redes neuronales, desde un perceptrón hasta una red multicapa simple.
